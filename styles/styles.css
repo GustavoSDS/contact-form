@@ -307,6 +307,7 @@ main form .submit__button {
   border: none;
   height: 59px;
   border-radius: 0.5rem;
+  font-weight: 700;
   background-color: hsl(169, 82%, 27%);
   color: hsl(0, 0%, 100%);
 }
