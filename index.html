@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta
+			name="description"
+			content="Frontend Mentor challenges people to build themselves a frontend using HTML, CSS and Javascript." />
+		<meta
+			name="keywords"
+			content="frontend, html, css, javascript, mentor, challenge, call to entry, bootstrap, git, github, front-end development" />
+		<meta name="author" content="Gustavo S. Dos Santos" />
+		<meta name="robots" content="index, follow" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png" />
+
+		<link rel="stylesheet" href="./styles/styles.css" />
+		<title>Frontend Mentor | Contact form</title>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Contact Us</h1>
+			</header>
+			<main>
+				<form>
+					<div class="group">
+						<div class="first-name">
+							<label for="first-name" class="first-name__label"
+								>First Name <span class="required">*</span>
+							</label>
+							<input
+								autocomplete="off"
+								id="first-name"
+								class="first-name__input"
+								required
+								placeholder="John"
+								type="text" />
+							<p class="message-error" hidden>This field is required</p>
+						</div>
+						<div class="last-name">
+							<label for="last-name" class="last-name__label"
+								>Last Name <span class="required">*</span>
+							</label>
+							<input
+								autocomplete="off"
+								id="last-name"
+								required
+								class="last-name__input"
+								placeholder="Appleseed"
+								type="text" />
+							<p class="message-error" hidden>This field is required</p>
+						</div>
+					</div>
+					<div class="group email">
+						<label for="email" class="email__label">
+							Email Address <span class="required">*</span>
+						</label>
+						<input
+							autocomplete="off"
+							id="email"
+							required
+							class="email__input"
+							placeholder="email@example.com"
+							type="email" />
+						<p class="message-error" hidden>
+							Please enter a valid email address
+						</p>
+					</div>
+
+					<fieldset class="group query-type">
+						<legend>Query Type <span class="required">*</span></legend>
+						<div class="query-type__container">
+							<div class="query-type__general">
+								<input
+									id="general-query"
+									required
+									type="radio"
+									value="general"
+									name="query-type" />
+								<label for="general-query" class="query-type__general-label">
+									General Enquiry
+								</label>
+							</div>
+							<div class="query-type__support">
+								<input
+									id="support-query"
+									required
+									type="radio"
+									value="support"
+									name="query-type" />
+								<label for="support-query" class="query-type__support-label">
+									Support Request
+								</label>
+							</div>
+						</div>
+						<p class="message-error" hidden>Please select a query type</p>
+					</fieldset>
+
+					<div class="group message">
+						<label for="message">
+							Message <span class="required">*</span>
+						</label>
+						<textarea
+							id="message"
+							required
+							class="message__textarea"
+							placeholder="Your message here..."></textarea>
+						<p class="message-error" hidden>This field is required</p>
+					</div>
+
+					<div class="consent">
+						<div class="consent__checkbox">
+							<div class="consent__checkbox-container">
+								<input id="consent-checkbox" required type="checkbox" />
+								<img
+									src="./assets/images/icon-checkbox-check.svg"
+									alt="Consent" />
+							</div>
+							<label for="consent-checkbox">
+								I consent to being contacted by the team
+								<span class="required">*</span>
+							</label>
+						</div>
+						<p class="message-error" hidden>
+							To submit this form, please consent to being contacted
+						</p>
+					</div>
+					<div class="group submit">
+						<button class="submit__button" type="submit">Submit</button>
+					</div>
+				</form>
+			</main>
+		</div>
+		<div class="modal-notification">
+			<h2 class="modal-notification__title">
+				<img src="./assets/images/icon-success-check.svg" alt="Success!" />
+				Message Sent!
+			</h2>
+			<p class="modal-notification__message">
+				Thanks for completing the form. We'll be in touch soon!
+			</p>
+		</div>
+
+		<footer class="attribution" hidden>
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+			Coded by <a href="#">Your Name Here</a>.
+		</footer>
+
+		<script src="./js/main.js" defer async type="module"></script>
+	</body>
+</html>
